@@ -127,13 +127,12 @@
 
 <!-- テキスト -->
 <div id="text">
-【1】Gemini Robotics 1.5 is a new AI model. It helps robots see, think, and act in the real world. Robots with Gemini Robotics 1.5 can do many jobs. They can work with people, use tools, and solve problems. They do not need to be trained for every job; they can learn and try new things. This model is safe, smart, and works well. It is easy for developers to use. Gemini Robotics 1.5 helps robots finish tasks step by step. It is good for schools, homes, and factories. Now, robots can help people more. They can understand and move around. Gemini Robotics 1.5 makes robots helpful in our life.
-</div>
+【3】Woven City is a new city near Mount Fuji in Japan. Toyota is building this city to test new technology and new ways to live. The city is built at the bottom of Mount Fuji, far from big cities like Tokyo. The first people to live there will be Toyota workers and old people. The city started in 2021. In Woven City, many smart machines and robots are used every day. People live in special houses with smart tools, and robots help with cleaning and safety. There are not many normal cars, so the roads are safe and clean. In the future, more people will move to Woven City. Toyota hopes the lessons from Woven City will help cities in other places. This project is important for a better future in Japan and the world.</div>
 
 <!-- 音声再生（英文の下、ボタンの上） -->
 <div class="audio-wrapper">
   <audio controls>
-    <source src="85. Gemini 1.5.mp3" type="audio/mpeg">
+    <source src="3.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
@@ -146,10 +145,13 @@
 <div id="questions">
   <h3>Quiz</h3>
   <label>Select all options below that match the content of the passage.</label></span>
-  <span class="question-option"><input type="checkbox" class="q1" value="a"> It helps robots work with people.</span>
-  <span class="question-option"><input type="checkbox" class="q1" value="b"> Robots using Gemini Robotics 1.5 need training for every job.</span>
-  <span class="question-option"><input type="checkbox" class="q1" value="c"> Robots can move and act in the real world with Gemini Robotics 1.5.</span>
-  <span class="question-option"><input type="checkbox" class="q1" value="d"> Gemini Robotics 1.5 is not safe for school.</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="a"> Woven City is near Mount Fuji and far from big cities like Tokyo.</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="b"> Only normal cars are allowed on the roads in Woven City.
+</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="c"> Woven City was finished many years ago.
+</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="d"> Toyota is the company leading the Woven City project.
+</span>
 </div>
 
 <div id="result"></div>
@@ -169,7 +171,7 @@ function finishReading() {
   if (!startTime) return alert("Please start reading first!");
   const elapsedSec = (Date.now() - startTime) / 1000;
 
-  const correctAnswers = ["a","c"];
+  const correctAnswers = ["a","d"];
   const checked = Array.from(document.querySelectorAll(".q1:checked")).map(el => el.value);
   const numCorrect = checked.filter(val => correctAnswers.includes(val)).length;
   const accuracy = numCorrect / correctAnswers.length;
@@ -187,3 +189,4 @@ function finishReading() {
 
 </body>
 </html>
+
